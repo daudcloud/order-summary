@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --clr-background: hsl(225, 100%, 94%);
+  --clr-button: hsl(245, 75%, 52%);
+
+  /* ### Neutral */
+
+  --clr-payment-bg: hsl(225, 100%, 98%);
+  --clr-text: hsl(224, 23%, 55%);
+  --clr-title: hsl(223, 47%, 23%);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  color: var(--clr-text);
+  background-color: var(--clr-background);
+  font-family: "Red Hat Display", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  height: 100%;
+}
+
+h1,
+h3 {
+  color: var(--clr-title);
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 7rem 25px;
+}
+
+.card {
+  border-radius: 1rem;
+  background: white;
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 48px;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+}
+
+.img {
+  background-image: url("./images/illustration-hero.svg");
+  height: 30vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.payment {
+  display: flex;
+  align-items: center;
+  background: var(--clr-payment-bg);
+  width: 100%;
+  padding: 1.5em;
+  border-radius: 0.7rem;
+}
+
+.payment > span {
+  margin-left: auto;
+  color: var(--clr-button);
+  text-decoration: underline;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+.payment > span:hover {
+  color: hsl(245, 75%, 65%);
+  text-decoration: none;
+}
+
+.payment img {
+  width: 50px;
+  margin-right: 1rem;
+}
+
+p {
+  text-align: center;
+  font-weight: 500;
+}
+
+.proceed {
+  background: var(--clr-button);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 900;
+  width: 100%;
+  text-align: center;
+  border-radius: 0.7rem;
+  padding: 1em;
+  box-shadow: 0 20px 20px hsl(245, 75%, 90%);
+  transition: background 0.1s linear;
+  cursor: pointer;
+}
+
+.proceed:hover {
+  background: hsl(245, 75%, 65%);
+}
+
+.cancel {
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.1s linear;
+}
+
+.cancel:hover {
+  color: var(--clr-title);
+}
+
+@media (max-width: 450px) {
+  .img {
+    height: 20vh;
+  }
+  .container {
+    padding: 5rem 25px;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+  .payment {
+    font-size: 0.85rem;
+  }
+  .info {
+    padding: 25px;
+  }
+}
